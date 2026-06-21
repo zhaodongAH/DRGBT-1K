@@ -112,10 +112,6 @@ The training and testing sets maintain similar distributions in terms of target 
 * **DRGBT1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
 * **DRGBT1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
   > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version to facilitate research on spatial perturbation and cross-modality alignment.*
-  <br>
-  <p align="center">
-    <img src="fig_data/bbox_change.png" width="600" alt="Average RGB-TIR offset distribution under different viewpoints">
-  </p>
 * **UGVTIK**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
 * **Evaluation Toolkit**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/)
 
