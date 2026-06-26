@@ -112,7 +112,7 @@ The training and testing sets maintain similar distributions in terms of target 
 * **DRGBT1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
 * **DRGBT1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
   > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version to facilitate research on spatial perturbation and cross-modality alignment.*
-* **UGVTIK**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
+* **UGVT1K**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
 * **Evaluation Toolkit**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/)
 
 ---
@@ -152,34 +152,45 @@ Below are the baseline results of representative state-of-the-art trackers evalu
 
 | Method | Source | PR (%) | NPR (%) | SR (%) |
 | :--- | :---: | :---: | :---: | :---: |
-| **MCITrack** [12] | AAAI 25 | **52.53** | 43.01 | 38.21 |
-| **MOSSTrack** | CVPR 26 | 51.86 | **44.31** | **39.36** |
-| **GOLA** [33] | CVPR 26 | 49.84 | 43.79 | 38.67 |
-| **TATrack** [35] | AAAI 24 | 46.22 | 38.60 | 34.98 |
-| **BAT** [1] | AAAI 24 | 43.36 | 37.86 | 34.03 |
-| **OSTrack** [39] | ECCV 22 | 41.94 | 35.53 | 32.64 |
-| **CMRL** [3] | TIP 26 | 31.28 | 25.51 | 25.41 |
+| *RGBT Trackers* | | | | |
+| **OSTrack** | ECCV'22 | 47.39 | 41.47 | 34.46 |
+| **TBSI** | CVPR'23 | 43.89 | 38.81 | 32.34 |
+| **TATrack** | AAAI'24 | 47.82 | 41.17 | 34.40 |
+| **BAT** | AAAI'24 | 45.84 | 41.08 | 33.86 |
+| **PURA** | CVPR'24 | 48.32 | 40.73 | 33.98 |
+| **SDSTrack** | CVPR'24 | 40.66 | 33.64 | 28.23 |
+| **MMLoRAT** | ECCV'24 | 47.76 | **<font color="blue">43.06</font>** | 34.92 |
+| **CKD** | ACM MM'24 | 45.67 | 40.97 | 33.75 |
+| **AINet** | AAAI'25 | 44.83 | 40.42 | 33.14 |
+| **STTrack** | AAAI'25 | 22.57 | 17.38 | 16.61 |
+| **CAFormer** | AAAI'25 | 46.06 | 39.80 | 33.51 |
+| **FMTrack** | TCSVT'25 | **<font color="blue">48.64</font>** | 41.58 | 34.91 |
+| **QSTNet** | TIP'25 | 44.21 | 39.20 | 32.27 |
+| **MRTTrack** | PR'25 | 43.72 | 38.76 | 32.04 |
+| **UATrack** | IJCV'26 | 46.92 | 40.77 | 34.02 |
+| **GOLA** | CVPR'26 | **<font color="red">51.18</font>** | **<font color="red">46.42</font>** | **<font color="red">38.01</font>** |
+| *MMRGBT Trackers* | | | | |
+| **IPT** | IJCV'25 | 46.52 | 39.89 | 33.46 |
+| **TMKD** | PR'26 | 48.06 | 42.95 | **<font color="blue">35.52</font>** |
+| **SCDT** | CVPR'26 | 45.57 | 36.41 | 29.91 |
+| *DRGBT Trackers* | | | | |
+| **CMRL** | TIP'26 | 43.03 | 38.48 | 31.82 |
 
 
 ### Qualitative Results
 
-<details>
-<summary><b> Click to expand Qualitative Visualizations (Fig. 8 from Paper)</b></summary>
-
 <p align="center">
-  <img src="fig_data/vis_results.jpg" width="800" alt="Qualitative tracking results of different methods on DRGBT1K">
+  <img src="fig_data/vis_results.png" width="800" alt="Qualitative tracking results of different methods on DRGBT1K">
 </p>
-
-</details>
 
 ---
 
-## 8. UGVTIK: UAV-Ground Collaborative Visual Tracking Benchmark
+## 8. UGVT1K: UAV-Ground Collaborative Visual Tracking Benchmark
 
-As a derivative of DRGBT1K, we also release **UGVTIK** — a UAV-Ground collaborative RGB-only tracking benchmark. UGVTIK contains the same cross-platform sequences but uses only the visible (RGB) modality, enabling research on multi-view visual tracking without thermal data.
+As a derivative of DRGBT1K, we also release **UGVT1K** — a UAV-Ground collaborative RGB-only tracking benchmark. UGVT1K contains the same cross-platform sequences but uses only the visible (RGB) modality, enabling research on multi-view visual tracking without thermal data.
 
 <p align="center">
-  <img src="fig_data/UGVT1K.png" width="800" alt="UGVTIK: UAV-Ground collaborative visual tracking samples">
+  <img src="fig_data/UGVT1K.png" width="800" alt="UGVT1K: UAV-Ground collaborative visual tracking samples">
 </p>
 
 ---
