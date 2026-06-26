@@ -55,7 +55,9 @@ Below are representative samples from DRGBT1K, showcasing various scenes, catego
 | **LasHeR** | TIP 2021 | RGBT | 1 | 1224 | 734.8K | 32 | 19 | ✕ | ✕ | 0 |
 | **VTUAV** | CVPR 2022 | RGBT | 1 | 500 | 1.7M | 13 | 13 | ✕ | ✕ | 0 |
 | **DRGBT603** | TIP 2026 | DRGBT | 2 | 603 | 1.49M | 29 | 12 | ✓ | ✓ | 203 |
-| **DRGBT1K (Ours)** | — | DRGBT | 2 | **1045 (2090)** | **795K** | **24** | **15** | **✓** | **✓** | **1045** |
+| **DRGBT1K (Ours)** | — | DRGBT | 2 | **1045 (2090)†** | **795K** | **24** | **15** | **✓** | **✓** | **1045** |
+
+†indicates that DRGBT contains 2,090 RGBT tracking sequences in total.
 
 ### Distribution Statistics
 
@@ -121,18 +123,29 @@ The training and testing sets maintain similar distributions in terms of target 
 
 ```
 sequence_name/
-├── visible/                 # Visible (RGB) images
-│   ├── v000001.jpg
-│   ├── v000002.jpg
-│   └── ...
-├── infrared/                # Thermal infrared images
-│   ├── i000001.jpg
-│   ├── i000002.jpg
-│   └── ...
-├── visible.txt              # Bounding box annotations for visible frames
-├── infrared.txt             # Bounding box annotations for infrared frames
-├── modality.txt             # Frame-level modality labels
-└── platform.txt             # Frame-level platform transition labels
+├── ground_viewq/
+│   ├── RGB/
+│   │   ├── 000001.jpg
+│   │   └── ...
+│   ├── TIR/
+│   │   ├── 000001.jpg
+│   │   └── ...
+│   └── init.txt
+├── uav_viewq/
+│   ├── RGB/
+│   │   ├── 000001.jpg
+│   │   └── ...
+│   ├── TIR/
+│   │   ├── 000001.jpg
+│   │   └── ...
+│   └── init.txt
+├── challenges.txt
+├── init_frame.txt
+├── modality.txt
+├── platforms.txt
+├── scene_class.txt
+├── target_class.txt
+└── valid_frames.txt
 ```
 
 ---
@@ -152,7 +165,7 @@ Below are the baseline results of representative state-of-the-art trackers evalu
 
 | Method | Source | PR (%) | NPR (%) | SR (%) |
 | :--- | :---: | :---: | :---: | :---: |
-| *RGBT Trackers* | | | | |
+| <center>*RGBT Trackers*</center> | | | | |
 | **OSTrack** | ECCV'22 | 47.39 | 41.47 | 34.46 |
 | **TBSI** | CVPR'23 | 43.89 | 38.81 | 32.34 |
 | **TATrack** | AAAI'24 | 47.82 | 41.17 | 34.40 |
@@ -169,11 +182,11 @@ Below are the baseline results of representative state-of-the-art trackers evalu
 | **MRTTrack** | PR'25 | 43.72 | 38.76 | 32.04 |
 | **UATrack** | IJCV'26 | 46.92 | 40.77 | 34.02 |
 | **GOLA** | CVPR'26 | **<font color="red">51.18</font>** | **<font color="red">46.42</font>** | **<font color="red">38.01</font>** |
-| *MMRGBT Trackers* | | | | |
+| <center>*MMRGBT Trackers*</center> | | | | |
 | **IPT** | IJCV'25 | 46.52 | 39.89 | 33.46 |
 | **TMKD** | PR'26 | 48.06 | 42.95 | **<font color="blue">35.52</font>** |
 | **SCDT** | CVPR'26 | 45.57 | 36.41 | 29.91 |
-| *DRGBT Trackers* | | | | |
+| <center>*DRGBT Trackers*</center> | | | | |
 | **CMRL** | TIP'26 | 43.03 | 38.48 | 31.82 |
 
 
