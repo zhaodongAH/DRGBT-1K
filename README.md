@@ -163,31 +163,168 @@ We evaluate multiple categories of tracking methods on DRGBT1K, including RGBT t
 
 Below are the baseline results of representative state-of-the-art trackers evaluated on the DRGBT1K test set:
 
-| Method | Source | PR (%) | NPR (%) | SR (%) |
-| :--- | :---: | :---: | :---: | :---: |
-| <center>*RGBT Trackers*</center> | | | | |
-| **OSTrack** | ECCV'22 | 47.39 | 41.47 | 34.46 |
-| **TBSI** | CVPR'23 | 43.89 | 38.81 | 32.34 |
-| **TATrack** | AAAI'24 | 47.82 | 41.17 | 34.40 |
-| **BAT** | AAAI'24 | 45.84 | 41.08 | 33.86 |
-| **PURA** | CVPR'24 | 48.32 | 40.73 | 33.98 |
-| **SDSTrack** | CVPR'24 | 40.66 | 33.64 | 28.23 |
-| **MMLoRAT** | ECCV'24 | 47.76 | **<font color="blue">43.06</font>** | 34.92 |
-| **CKD** | ACM MM'24 | 45.67 | 40.97 | 33.75 |
-| **AINet** | AAAI'25 | 44.83 | 40.42 | 33.14 |
-| **STTrack** | AAAI'25 | 22.57 | 17.38 | 16.61 |
-| **CAFormer** | AAAI'25 | 46.06 | 39.80 | 33.51 |
-| **FMTrack** | TCSVT'25 | **<font color="blue">48.64</font>** | 41.58 | 34.91 |
-| **QSTNet** | TIP'25 | 44.21 | 39.20 | 32.27 |
-| **MRTTrack** | PR'25 | 43.72 | 38.76 | 32.04 |
-| **UATrack** | IJCV'26 | 46.92 | 40.77 | 34.02 |
-| **GOLA** | CVPR'26 | **<font color="red">51.18</font>** | **<font color="red">46.42</font>** | **<font color="red">38.01</font>** |
-| <center>*MMRGBT Trackers*</center> | | | | |
-| **IPT** | IJCV'25 | 46.52 | 39.89 | 33.46 |
-| **TMKD** | PR'26 | 48.06 | 42.95 | **<font color="blue">35.52</font>** |
-| **SCDT** | CVPR'26 | 45.57 | 36.41 | 29.91 |
-| <center>*DRGBT Trackers*</center> | | | | |
-| **CMRL** | TIP'26 | 43.03 | 38.48 | 31.82 |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Method</th>
+      <th align="center">Source</th>
+      <th align="center">PR (%)</th>
+      <th align="center">NPR (%)</th>
+      <th align="center">SR (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="5" align="center"><b><i>RGBT Trackers</i></b></td>
+    </tr>
+    <tr>
+      <td><b>OSTrack</b></td>
+      <td align="center">ECCV'22</td>
+      <td align="center">47.39</td>
+      <td align="center">41.47</td>
+      <td align="center">34.46</td>
+    </tr>
+    <tr>
+      <td><b>TBSI</b></td>
+      <td align="center">CVPR'23</td>
+      <td align="center">43.89</td>
+      <td align="center">38.81</td>
+      <td align="center">32.34</td>
+    </tr>
+    <tr>
+      <td><b>TATrack</b></td>
+      <td align="center">AAAI'24</td>
+      <td align="center">47.82</td>
+      <td align="center">41.17</td>
+      <td align="center">34.40</td>
+    </tr>
+    <tr>
+      <td><b>BAT</b></td>
+      <td align="center">AAAI'24</td>
+      <td align="center">45.84</td>
+      <td align="center">41.08</td>
+      <td align="center">33.86</td>
+    </tr>
+    <tr>
+      <td><b>PURA</b></td>
+      <td align="center">CVPR'24</td>
+      <td align="center">48.32</td>
+      <td align="center">40.73</td>
+      <td align="center">33.98</td>
+    </tr>
+    <tr>
+      <td><b>SDSTrack</b></td>
+      <td align="center">CVPR'24</td>
+      <td align="center">40.66</td>
+      <td align="center">33.64</td>
+      <td align="center">28.23</td>
+    </tr>
+    <tr>
+      <td><b>MMLoRAT</b></td>
+      <td align="center">ECCV'24</td>
+      <td align="center">47.76</td>
+      <td align="center"><b><font color="blue">43.06</font></b></td>
+      <td align="center">34.92</td>
+    </tr>
+    <tr>
+      <td><b>CKD</b></td>
+      <td align="center">ACM MM'24</td>
+      <td align="center">45.67</td>
+      <td align="center">40.97</td>
+      <td align="center">33.75</td>
+    </tr>
+    <tr>
+      <td><b>AINet</b></td>
+      <td align="center">AAAI'25</td>
+      <td align="center">44.83</td>
+      <td align="center">40.42</td>
+      <td align="center">33.14</td>
+    </tr>
+    <tr>
+      <td><b>STTrack</b></td>
+      <td align="center">AAAI'25</td>
+      <td align="center">22.57</td>
+      <td align="center">17.38</td>
+      <td align="center">16.61</td>
+    </tr>
+    <tr>
+      <td><b>CAFormer</b></td>
+      <td align="center">AAAI'25</td>
+      <td align="center">46.06</td>
+      <td align="center">39.80</td>
+      <td align="center">33.51</td>
+    </tr>
+    <tr>
+      <td><b>FMTrack</b></td>
+      <td align="center">TCSVT'25</td>
+      <td align="center"><b><font color="blue">48.64</font></b></td>
+      <td align="center">41.58</td>
+      <td align="center">34.91</td>
+    </tr>
+    <tr>
+      <td><b>QSTNet</b></td>
+      <td align="center">TIP'25</td>
+      <td align="center">44.21</td>
+      <td align="center">39.20</td>
+      <td align="center">32.27</td>
+    </tr>
+    <tr>
+      <td><b>MRTTrack</b></td>
+      <td align="center">PR'25</td>
+      <td align="center">43.72</td>
+      <td align="center">38.76</td>
+      <td align="center">32.04</td>
+    </tr>
+    <tr>
+      <td><b>UATrack</b></td>
+      <td align="center">IJCV'26</td>
+      <td align="center">46.92</td>
+      <td align="center">40.77</td>
+      <td align="center">34.02</td>
+    </tr>
+    <tr>
+      <td><b>GOLA</b></td>
+      <td align="center">CVPR'26</td>
+      <td align="center"><b><font color="red">51.18</font></b></td>
+      <td align="center"><b><font color="red">46.42</font></b></td>
+      <td align="center"><b><font color="red">38.01</font></b></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="center"><b><i>MMRGBT Trackers</i></b></td>
+    </tr>
+    <tr>
+      <td><b>IPT</b></td>
+      <td align="center">IJCV'25</td>
+      <td align="center">46.52</td>
+      <td align="center">39.89</td>
+      <td align="center">33.46</td>
+    </tr>
+    <tr>
+      <td><b>TMKD</b></td>
+      <td align="center">PR'26</td>
+      <td align="center">48.06</td>
+      <td align="center">42.95</td>
+      <td align="center"><b><font color="blue">35.52</font></b></td>
+    </tr>
+    <tr>
+      <td><b>SCDT</b></td>
+      <td align="center">CVPR'26</td>
+      <td align="center">45.57</td>
+      <td align="center">36.41</td>
+      <td align="center">29.91</td>
+    </tr>
+    <tr>
+      <td colspan="5" align="center"><b><i>DRGBT Trackers</i></b></td>
+    </tr>
+    <tr>
+      <td><b>CMRL</b></td>
+      <td align="center">TIP'26</td>
+      <td align="center">43.03</td>
+      <td align="center">38.48</td>
+      <td align="center">31.82</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ### Qualitative Results
