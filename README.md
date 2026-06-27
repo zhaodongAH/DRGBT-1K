@@ -1,4 +1,4 @@
-# DRGBT1K: Toward a Large-scale and High-quality Benchmark for DRGBT Tracking
+# DRGBT-1K: Toward a Large-scale and High-quality Benchmark for DRGBT Tracking
 
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE)
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/<ARXIV_PAPER_ID>)
@@ -14,7 +14,7 @@ Official repository for the paper:
 
 RGBT tracking receives a surge of interest in the computer vision community, but existing RGBT benchmarks assume a single, fixed observation platform with synchronized RGB and thermal sensors. In real-world collaborative perception systems, however, the target is often observed by **multiple heterogeneous platforms** (e.g., UAVs and ground cameras) that carry different sensors and may hand off tracking responsibility over time. This leads to **Dynamic RGBT (DRGBT) tracking**, where both the available modalities and observation viewpoints change dynamically.
 
-The existing DRGBT dataset (DRGBT603) is limited in scale and contains many synthetically constructed cross-platform sequences. To address these limitations, we present **DRGBT1K** — the first large-scale, fully real-captured DRGBT tracking benchmark.
+The existing DRGBT dataset (DRGBT603) is limited in scale and contains many synthetically constructed cross-platform sequences. To address these limitations, we present **DRGBT-1K** — the first large-scale, fully real-captured DRGBT tracking benchmark.
 
 <p align="center">
   <img src="fig_data/motivation.png" width="650" alt="Fig 1. Motivation: Platform-switching">
@@ -22,7 +22,7 @@ The existing DRGBT dataset (DRGBT603) is limited in scale and contains many synt
 
 ---
 
-## 2. About DRGBT1K Benchmark
+## 2. About DRGBT-1K Benchmark
 
 ### Highlights
 
@@ -35,10 +35,10 @@ The existing DRGBT dataset (DRGBT603) is limited in scale and contains many synt
 
 ### Data Samples
 
-Below are representative samples from DRGBT1K, showcasing various scenes, categories, and cross-platform viewpoints (RGB and thermal pairs from both UAV and ground perspectives):
+Below are representative samples from DRGBT-1K, showcasing various scenes, categories, and cross-platform viewpoints (RGB and thermal pairs from both UAV and ground perspectives):
 
 <p align="center">
-  <img src="fig_data/data_scene_show.png" width="800" alt="Representative samples from DRGBT1K across diverse scenes and categories">
+  <img src="fig_data/data_scene_show.png" width="800" alt="Representative samples from DRGBT-1K across diverse scenes and categories">
 </p>
 
 ---
@@ -55,7 +55,7 @@ Below are representative samples from DRGBT1K, showcasing various scenes, catego
 | **LasHeR** | TIP 2021 | RGBT | 1 | 1224 | 734.8K | 32 | 19 | ✕ | ✕ | 0 |
 | **VTUAV** | CVPR 2022 | RGBT | 1 | 500 | 1.7M | 13 | 13 | ✕ | ✕ | 0 |
 | **DRGBT603** | TIP 2026 | DRGBT | 2 | 603 | 1.49M | 29 | 12 | ✓ | ✓ | 203 |
-| **DRGBT1K (Ours)** | — | DRGBT | 2 | **1045 (2090)†** | **795K** | **24** | **15** | **✓** | **✓** | **1045** |
+| **DRGBT-1K (Ours)** | — | DRGBT | 2 | **1045 (2090)†** | **795K** | **24** | **15** | **✓** | **✓** | **1045** |
 
 †indicates that DRGBT contains 2,090 RGBT tracking sequences in total.
 
@@ -64,7 +64,7 @@ Below are representative samples from DRGBT1K, showcasing various scenes, catego
 The following figure shows: (a) Category distribution across daytime and nighttime scenarios, (b) Distribution of modalities and platforms, and (c) Distribution of challenge attributes with train/test splits.
 
 <p align="center">
-  <img src="fig_data/distribution.png" width="800" alt="Distribution statistics of DRGBT1K">
+  <img src="fig_data/distribution.png" width="800" alt="Distribution statistics of DRGBT-1K">
 </p>
 
 <p align="center">
@@ -73,7 +73,7 @@ The following figure shows: (a) Category distribution across daytime and nightti
 
 ### 15 Challenge Attributes
 
-DRGBT1K annotates each sequence with 15 challenge attributes reflecting real-world tracking scenarios:
+DRGBT-1K annotates each sequence with 15 challenge attributes reflecting real-world tracking scenarios:
 
 | Attr | Full Name | Description |
 | :---: | :--- | :--- |
@@ -97,7 +97,7 @@ DRGBT1K annotates each sequence with 15 challenge attributes reflecting real-wor
 
 ## 4. Train/Test Split
 
-We split DRGBT1K into **training** and **testing** subsets according to the target category distribution, ensuring balanced representation across all 24 classes:
+We split DRGBT-1K into **training** and **testing** subsets according to the target category distribution, ensuring balanced representation across all 24 classes:
 
 | Split | Sequences | Usage |
 | :---: | :---: | :--- |
@@ -111,8 +111,8 @@ The training and testing sets maintain similar distributions in terms of target 
 
 ## 5. Dataset Download
 
-* **DRGBT1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
-* **DRGBT1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
+* **DRGBT-1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
+* **DRGBT-1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
   > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version to facilitate research on spatial perturbation and cross-modality alignment.*
 * **UGVT1K**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
 * **Evaluation Toolkit**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/)
@@ -152,16 +152,16 @@ sequence_name/
 
 ## 7. Benchmark Results
 
-### Evaluation on DRGBT1K
+### Evaluation on DRGBT-1K
 
-We evaluate multiple categories of tracking methods on DRGBT1K, including RGBT trackers, multi-modal trackers, and DRGBT trackers, under the **One-Pass Evaluation (OPE)** protocol. The primary evaluation metrics are:
+We evaluate multiple categories of tracking methods on DRGBT-1K, including RGBT trackers, multi-modal trackers, and DRGBT trackers, under the **One-Pass Evaluation (OPE)** protocol. The primary evaluation metrics are:
 * **Precision Rate (PR)**: Percentage of frames whose center location error is within 20 pixels.
 * **Normalized Precision Rate (NPR)**: Center location error normalized by target size.
 * **Success Rate (SR)**: Bounding box overlap (IoU) evaluated using Area Under Curve (AUC).
 
-### Overall Performance on DRGBT1K (OPE Protocol)
+### Overall Performance on DRGBT-1K (OPE Protocol)
 
-Below are the baseline results of representative state-of-the-art trackers evaluated on the DRGBT1K test set:
+Below are the baseline results of representative state-of-the-art trackers evaluated on the DRGBT-1K test set:
 
 <table>
   <thead>
@@ -330,14 +330,14 @@ Below are the baseline results of representative state-of-the-art trackers evalu
 ### Qualitative Results
 
 <p align="center">
-  <img src="fig_data/vis_results.png" width="800" alt="Qualitative tracking results of different methods on DRGBT1K">
+  <img src="fig_data/vis_results.png" width="800" alt="Qualitative tracking results of different methods on DRGBT-1K">
 </p>
 
 ---
 
 ## 8. UGVT1K: UAV-Ground Collaborative Visual Tracking Benchmark
 
-As a derivative of DRGBT1K, we also release **UGVT1K** — a UAV-Ground collaborative RGB-only tracking benchmark. UGVT1K contains the same cross-platform sequences but uses only the visible (RGB) modality, enabling research on multi-view visual tracking without thermal data.
+As a derivative of DRGBT-1K, we also release **UGVT1K** — a UAV-Ground collaborative RGB-only tracking benchmark. UGVT1K contains the same cross-platform sequences but uses only the visible (RGB) modality, enabling research on multi-view visual tracking without thermal data.
 
 <p align="center">
   <img src="fig_data/UGVT1K.png" width="800" alt="UGVT1K: UAV-Ground collaborative visual tracking samples">
@@ -350,7 +350,7 @@ As a derivative of DRGBT1K, we also release **UGVT1K** — a UAV-Ground collabor
 If you find our benchmark, toolkit, or paper helpful in your research, please cite us:
 
 ```bibtex
-@article{drgbt1k2026,
+@article{DRGBT-1K2026,
   title={Toward a Large-scale and High-quality Benchmark for DRGBT Tracking},
   author={First Author and Second Author and Third Author},
   journal={arXiv preprint arXiv:xxxx.xxxx},
