@@ -341,6 +341,12 @@ As a derivative of DRGBT-1K, we also release **UGVT1K** — a UAV-Ground collabo
   <img src="fig_data/UGVT1K.png" width="800" alt="UGVT1K: UAV-Ground collaborative visual tracking samples">
 </p>
 
+
+## License
+
+This dataset is released under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+
+
 <!--
 ---
 
@@ -359,7 +365,3 @@ If you find our benchmark, toolkit, or paper helpful in your research, please ci
 
 ---
 --!>
-
-## License
-
-This dataset is released under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
