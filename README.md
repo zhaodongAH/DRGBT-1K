@@ -140,12 +140,10 @@ sequence_name/
 │   │   └── ...
 │   └── init.txt
 ├── challenges.txt
-├── init_frame.txt
 ├── modality.txt
 ├── platforms.txt
 ├── scene_class.txt
 ├── target_class.txt
-└── valid_frames.txt
 ```
 
 ---
