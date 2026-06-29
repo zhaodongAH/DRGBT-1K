@@ -329,7 +329,10 @@ Below are the baseline results of representative state-of-the-art trackers evalu
 
 To analyze tracker performance under various scenarios, we evaluate the trackers across 15 challenge attributes and 3 variation subsets: **Modality Variation Only (MVO)**, **Platform Variation Only (PVO)**, and **Combined Variation (CV)**.
 
-Each cell reports **PR/SR (%)**. The best and second-best results under each attribute are highlighted in **red** and **blue** font, respectively. Notably, the dedicated DRGBT tracker **CMRL** achieves outstanding performance on the platform transition subsets (**PVO** and **CV**), demonstrating its robustness in handling viewpoint and platform switches. Meanwhile, **GOLA** achieves the best success rates (SR) across the largest number of individual challenge attributes (including PO, LI, SO, FM, SV, ARC, and MVO), reflecting its strong generalization under standard single-platform challenge conditions.
+Each cell reports **PR/SR (%)**. The best and second-best results under each row are highlighted in **red** and **blue** font, respectively. Based on the attribute- and subset-specific evaluation, we can observe that:
+* The dedicated DRGBT tracker **CMRL** achieves outstanding performance on the platform transition subsets (**PVO** and **CV**), demonstrating its robustness in handling viewpoint and platform switches. It also exhibits superior robustness under degradation-related attributes, achieving the best PR and SR scores under **LR**, **HI**, **FL**, **OV**, and **CM**.
+* **GOLA** achieves the best success rates (SR) across the largest number of individual challenge attributes (including PO, LI, SO, FM, SV, and ARC) and the **MVO** subset, reflecting its strong generalization in handling diverse challenge factors and dynamic modality variations.
+* Other trackers also show distinct strengths: **TATrack** achieves the highest Precision Rate (PR) under **BC**, **SO**, **SV**, and **ARC**, while the modality-missing tracker **TMKD** performs competitively under **SA** (similar appearance) and **TC** (thermal crossover).
 
 <h4>Attribute- and Subset-based Performance on DRGBT-1K Test Set (Part 1)</h4>
 <table>
