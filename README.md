@@ -341,6 +341,7 @@ As a derivative of DRGBT-1K, we also release **UGVT1K** — a UAV-Ground collabo
   <img src="fig_data/UGVT1K.png" width="800" alt="UGVT1K: UAV-Ground collaborative visual tracking samples">
 </p>
 
+<!--
 ---
 
 ## 9. Citation
@@ -357,6 +358,7 @@ If you find our benchmark, toolkit, or paper helpful in your research, please ci
 ```
 
 ---
+--!>
 
 ## License
 
