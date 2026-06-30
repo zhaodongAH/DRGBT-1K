@@ -1,8 +1,9 @@
-# DRGBT-1K: Toward a Large-scale and High-quality Benchmark for DRGBT Tracking
+# DRGBT-1K: A Large-scale High-quality Benchmark for Dynamic RGBT Tracking
 
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE)
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/<ARXIV_PAPER_ID>)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-green)](#5-dataset-download)
+[![Evaluation](https://img.shields.io/badge/Evaluation-Leaderboard-purple)](https://www.codabench.org/competitions/17297/#/pages-tab)
 
 Official repository for the paper:
 
@@ -114,7 +115,7 @@ The training and testing sets maintain similar distributions in terms of target 
 * **DRGBT-1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
 * **DRGBT-1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
   > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version to facilitate research on spatial perturbation and cross-modality alignment.*
-* **UGVT1K**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
+* **UGVT-1K**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
 * **Evaluation Toolkit**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/)
 
 ---
@@ -157,7 +158,7 @@ We evaluate multiple categories of tracking methods on DRGBT-1K, including RGBT 
 * **Normalized Precision Rate (NPR)**: Center location error normalized by target size.
 * **Success Rate (SR)**: Bounding box overlap (IoU) evaluated using Area Under Curve (AUC).
 
-### Overall Performance on DRGBT-1K (OPE Protocol)
+### Overall Performance on DRGBT-1K
 
 Below are the baseline results of representative state-of-the-art trackers evaluated on the DRGBT-1K test set:
 
@@ -325,7 +326,7 @@ Below are the baseline results of representative state-of-the-art trackers evalu
 </table>
 
 
-### Attribute- and Subset-based Performance (OPE Protocol)
+### Attribute- and Subset-based Performance
 
 To analyze tracker performance under various scenarios, we evaluate the trackers across 15 challenge attributes and 3 variation subsets: **Modality Variation Only (MVO)**, **Platform Variation Only (PVO)**, and **Combined Variation (CV)**.
 
@@ -853,9 +854,9 @@ Each cell reports **PR/SR (%)**. The best and second-best results under each row
 
 ---
 
-## 8. UGVT1K: UAV-Ground Collaborative Visual Tracking Benchmark
+## 8. UGVT-1K: UAV-Ground Collaborative Visual Tracking Benchmark
 
-As a derivative of DRGBT-1K, we also release **UGVT1K** — a UAV-Ground collaborative RGB-only tracking benchmark. UGVT1K contains the same cross-platform sequences but uses only the visible (RGB) modality, enabling research on multi-view visual tracking without thermal data.
+As a derivative of DRGBT-1K, we also release **UGVT-1K** — a UAV-Ground collaborative RGB-only tracking benchmark. UGVT1K contains the same cross-platform sequences but uses only the visible (RGB) modality, enabling research on multi-view visual tracking without thermal data.
 
 <p align="center">
   <img src="fig_data/UGVT1K.png" width="800" alt="UGVT1K: UAV-Ground collaborative visual tracking samples">
