@@ -6,7 +6,7 @@
 
 Official repository for the paper:
 
-**[Toward a Large-scale and High-quality Benchmark for DRGBT Tracking](https://arxiv.org/abs/<ARXIV_PAPER_ID>)**
+**[DRGBT-1K: A Large-scale High-quality Benchmark for Dynamic RGBT Tracking](https://arxiv.org/abs/<ARXIV_PAPER_ID>)**
 
 ---
 
