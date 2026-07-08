@@ -11,6 +11,9 @@ Official repository for the paper:
 
 ---
 
+**Online Evaluation Platform:**
+https://www.codabench.org/competitions/17422/
+
 ## 1. Motivation
 
 RGBT tracking receives a surge of interest in the computer vision community, but existing RGBT benchmarks assume a single, fixed observation platform with synchronized RGB and thermal sensors. In real-world collaborative perception systems, however, the target is often observed by **multiple heterogeneous platforms** (e.g., UAVs and ground cameras) that carry different sensors and may hand off tracking responsibility over time. This leads to **Dynamic RGBT (DRGBT) tracking**, where both the available modalities and observation viewpoints change dynamically.
