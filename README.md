@@ -113,7 +113,7 @@ The training and testing sets maintain similar distributions in terms of target 
 
 * **DRGBT-1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/s/1JEkNQNG4gr3qckoY65lTDA?pwd=g13h)（Password: g13h）
 * **DRGBT-1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/s/1GUuPtvjFX1DpNhIbEi5HkQ?pwd=6xxh)（Password: 6xxh）
-  > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version (where the spatial deviation is constrained within **$[0.01D, 0.17D]$** and the initial bias is randomly sampled within **$[2\%, 17\%]D$**, with $D$ being the image diagonal length) to facilitate research on spatial perturbation and cross-modality alignment.*
+  > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version (where the spatial deviation is constrained within [0.01D, 0.17D] and the initial bias is randomly sampled within [2%, 17%]D, with D being the image diagonal length) to facilitate research on spatial perturbation and cross-modality alignment.*
 
 ---
 
