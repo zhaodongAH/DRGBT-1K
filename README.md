@@ -1,19 +1,13 @@
 # DRGBT-1K: A Large-scale High-quality Benchmark for Dynamic RGBT Tracking
 
-[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE)
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/<ARXIV_PAPER_ID>)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-green)](#5-dataset-download)
-[![Evaluation](https://img.shields.io/badge/Evaluation-Leaderboard-purple)](https://www.codabench.org/competitions/17297/#/pages-tab)
+[![Evaluation](https://img.shields.io/badge/Evaluation-Leaderboard-purple)](https://www.codabench.org/competitions/17422/#/pages-tab)
 
-Official repository for the paper:
-
-**[DRGBT-1K: A Large-scale High-quality Benchmark for Dynamic RGBT Tracking](https://arxiv.org/abs/<ARXIV_PAPER_ID>)**
-
----
 
 **Online Evaluation Platform:**
 https://www.codabench.org/competitions/17422/
 
+---
 ## 1. Motivation
 
 RGBT tracking receives a surge of interest in the computer vision community, but existing RGBT benchmarks assume a single, fixed observation platform with synchronized RGB and thermal sensors. In real-world collaborative perception systems, however, the target is often observed by **multiple heterogeneous platforms** (e.g., UAVs and ground cameras) that carry different sensors and may hand off tracking responsibility over time. This leads to **Dynamic RGBT (DRGBT) tracking**, where both the available modalities and observation viewpoints change dynamically.
@@ -51,15 +45,15 @@ Below are representative samples from DRGBT-1K, showcasing various scenes, categ
 
 ### Comparison with Existing Benchmarks
 
-| Dataset | Pub. Info | Task Type | View Num. | Sequence Num. | Total Frames | Object Classes | Attr. | Dynamic Modality | Cross Platform | Real Cross-platform Seq. Num. |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **GTOT** | TIP 2017 | RGBT | 1 | 50 | 7.8K | 9 | 7 | ✕ | ✕ | 0 |
-| **RGBT210** | CVPR 2018 | RGBT | 1 | 210 | 104.7K | 22 | 12 | ✕ | ✕ | 0 |
-| **RGBT234** | TPAMI 2019 | RGBT | 1 | 234 | 116.7K | 22 | 12 | ✕ | ✕ | 0 |
-| **LasHeR** | TIP 2021 | RGBT | 1 | 1224 | 734.8K | 32 | 19 | ✕ | ✕ | 0 |
-| **VTUAV** | CVPR 2022 | RGBT | 1 | 500 | 1.7M | 13 | 13 | ✕ | ✕ | 0 |
-| **DRGBT603** | TIP 2026 | DRGBT | 2 | 603 | 1.49M | 29 | 12 | ✓ | ✓ | 203 |
-| **DRGBT-1K (Ours)** | — | DRGBT | 2 | **1045 (2090)†** | **795K** | **24** | **15** | **✓** | **✓** | **1045** |
+| Dataset | Pub. Info | Task Type | View Num. | Sequence Num. | Total Frames | Object Classes | Attr. | Dynamic Modality | Cross Platform | Real Cross-platform Seq. Num. | Synthetic Cross-platform Seq. Num. |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **GTOT** | TIP 2017 | RGBT | 1 | 50 | 7.8K | 9 | 7 | ✕ | ✕ | 0 | 0 |
+| **RGBT210** | CVPR 2018 | RGBT | 1 | 210 | 104.7K | 22 | 12 | ✕ | ✕ | 0 | 0 |
+| **RGBT234** | TPAMI 2019 | RGBT | 1 | 234 | 116.7K | 22 | 12 | ✕ | ✕ | 0 | 0 |
+| **LasHeR** | TIP 2021 | RGBT | 1 | 1224 | 734.8K | 32 | 19 | ✕ | ✕ | 0 | 0 |
+| **VTUAV** | CVPR 2022 | RGBT | 1 | 500 | 1.7M | 13 | 13 | ✕ | ✕ | 0 | 0 |
+| **DRGBT603** | TIP 2026 | DRGBT | 2 | 603 | 1.49M | 29 | 12 | ✓ | ✓ | 203 | 400 |
+| **DRGBT-1K (Ours)** | — | DRGBT | 2 | **1045 (2090)†** | **795K** | **24** | **15** | **✓** | **✓** | **1045** | **0** |
 
 †indicates that DRGBT contains 2,090 RGBT tracking sequences in total.
 
@@ -70,6 +64,8 @@ The following figure shows: (a) Category distribution across daytime and nightti
 <p align="center">
   <img src="fig_data/distribution.png" width="800" alt="Distribution statistics of DRGBT-1K">
 </p>
+
+The frame distribution between UAV and ground viewpoints is highly balanced, accounting for **50.7%** and **49.3%** respectively, which significantly reduces viewpoint bias in cross-platform evaluation. In addition, quantitative analysis shows that platform transitions induce severe target scale variations: Ground-to-UAV handoffs result in target area reduction in **64.8%** of cases, while UAV-to-Ground handoffs lead to target area expansion in **62.8%** of cases.
 
 <p align="center">
   <img src="fig_data/category_challenge__wordcloud.png" width="800" alt="Distribution and Word Cloud Visualization">
@@ -115,11 +111,9 @@ The training and testing sets maintain similar distributions in terms of target 
 
 ## 5. Dataset Download
 
-* **DRGBT-1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
-* **DRGBT-1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
-  > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version to facilitate research on spatial perturbation and cross-modality alignment.*
-* **UGVT-1K**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/) | [Hugging Face](https://huggingface.co/)
-* **Evaluation Toolkit**: [BaiduNetdisk](https://pan.baidu.com/)（Password: xxxx）| [Google Drive](https://drive.google.com/)
+* **DRGBT-1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/s/1JEkNQNG4gr3qckoY65lTDA?pwd=g13h)（Password: g13h）
+* **DRGBT-1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/s/1GUuPtvjFX1DpNhIbEi5HkQ?pwd=6xxh)（Password: 6xxh）
+  > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version (where the spatial deviation is constrained within **$[0.01D, 0.17D]$** and the initial bias is randomly sampled within **$[2\%, 17\%]D$**, with $D$ being the image diagonal length) to facilitate research on spatial perturbation and cross-modality alignment.*
 
 ---
 
@@ -156,7 +150,7 @@ sequence_name/
 
 ### Evaluation on DRGBT-1K
 
-We evaluate multiple categories of tracking methods on DRGBT-1K, including RGBT trackers, multi-modal trackers, and DRGBT trackers, under the **One-Pass Evaluation (OPE)** protocol. The primary evaluation metrics are:
+We evaluate multiple categories of tracking methods on DRGBT-1K, including RGBT trackers, modality-missing RGBT (MMRGBT) trackers, and DRGBT trackers, under the **One-Pass Evaluation (OPE)** protocol. The primary evaluation metrics are:
 * **Precision Rate (PR)**: Percentage of frames whose center location error is within 20 pixels.
 * **Normalized Precision Rate (NPR)**: Center location error normalized by target size.
 * **Success Rate (SR)**: Bounding box overlap (IoU) evaluated using Area Under Curve (AUC).
@@ -331,7 +325,7 @@ Below are the baseline results of representative state-of-the-art trackers evalu
 
 ### Attribute- and Subset-based Performance
 
-To analyze tracker performance under various scenarios, we evaluate the trackers across 15 challenge attributes and 3 variation subsets: **Modality Variation Only (MVO)**, **Platform Variation Only (PVO)**, and **Combined Variation (CV)**.
+To analyze tracker performance under various scenarios, we evaluate the trackers across 15 challenge attributes and 3 variation subsets: **Modality Variation Only (MVO, 209 sequences)**, **Platform Variation Only (PVO, 209 sequences)**, and **Combined Variation (CV, 627 sequences)**.
 
 Each cell reports **PR/SR (%)**. The best and second-best results under each row are highlighted in **red** and **blue** font, respectively. Based on the attribute- and subset-specific evaluation, we can observe that:
 * The dedicated DRGBT tracker **CMRL** achieves outstanding performance on the platform transition subsets (**PVO** and **CV**), demonstrating its robustness in handling viewpoint and platform switches. It also exhibits superior robustness under degradation-related attributes, achieving the best PR and SR scores under **LR**, **HI**, **FL**, **OV**, and **CM**.
@@ -859,7 +853,7 @@ Each cell reports **PR/SR (%)**. The best and second-best results under each row
 
 ## 8. UGVT-1K: UAV-Ground Collaborative Visual Tracking Benchmark
 
-As a derivative of DRGBT-1K, we also release **UGVT-1K** — a UAV-Ground collaborative RGB-only tracking benchmark. UGVT1K contains the same cross-platform sequences but uses only the visible (RGB) modality, enabling research on multi-view visual tracking without thermal data.
+As a derivative of DRGBT-1K, we also release **UGVT-1K** — a UAV-Ground collaborative RGB-only tracking benchmark. UGVT-1K contains the same cross-platform sequences (split into **800 sequences for training and 245 for testing**) but uses only the visible (RGB) modality, enabling research on multi-view visual tracking without thermal data.
 
 <p align="center">
   <img src="fig_data/UGVT1K.png" width="800" alt="UGVT1K: UAV-Ground collaborative visual tracking samples">
