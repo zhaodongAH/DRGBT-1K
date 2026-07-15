@@ -15,7 +15,7 @@ RGBT tracking receives a surge of interest in the computer vision community, but
 The existing DRGBT dataset (DRGBT603) is limited in scale and contains many synthetically constructed cross-platform sequences. To address these limitations, we present **DRGBT-1K** — the first large-scale, fully real-captured DRGBT tracking benchmark.
 
 <p align="center">
-  <img src="fig_data/motivation.png" width="650" alt="Fig 1. Motivation: Platform-switching">
+  <img src="fig_data/motivation3.png" width="800" alt="Fig 1. Motivation, challenge attributes, scale comparison, and representative sequences of DRGBT-1K">
 </p>
 
 ---
@@ -59,16 +59,20 @@ Below are representative samples from DRGBT-1K, showcasing various scenes, categ
 
 ### Distribution Statistics
 
-The following figure shows: (a) Category distribution across daytime and nighttime scenarios, (b) Distribution of modalities and platforms, and (c) Distribution of challenge attributes with train/test splits.
+The following figure shows: (a) Category distribution across daytime and nighttime scenarios, (b) Visualization of subset and challenge attribute co-occurrence relationships, and (c) Distribution of challenge attributes with train/test splits.
 
 <p align="center">
-  <img src="fig_data/distribution.png" width="800" alt="Distribution statistics of DRGBT-1K">
+  <img src="fig_data/distribution2.png" width="800" alt="Distribution statistics of DRGBT-1K">
 </p>
 
 The frame distribution between UAV and ground viewpoints is highly balanced, accounting for **50.7%** and **49.3%** respectively, which significantly reduces viewpoint bias in cross-platform evaluation. In addition, quantitative analysis shows that platform transitions induce severe target scale variations: Ground-to-UAV handoffs result in target area reduction in **64.8%** of cases, while UAV-to-Ground handoffs lead to target area expansion in **62.8%** of cases.
 
 <p align="center">
-  <img src="fig_data/category_challenge__wordcloud.png" width="800" alt="Distribution and Word Cloud Visualization">
+  <img src="fig_data/drgbt_variation.png" width="550" alt="Distribution of modalities and platforms and target variation under platform switches">
+</p>
+
+<p align="center">
+  <img src="fig_data/category_challenge_pair_longtail_edge_text_fade_wordcloud.png" width="800" alt="Distribution and Word Cloud Visualization of Category-Challenge Pairs">
 </p>
 
 ### 15 Challenge Attributes
@@ -114,6 +118,10 @@ The training and testing sets maintain similar distributions in terms of target 
 * **DRGBT-1K (Aligned)**: [BaiduNetdisk](https://pan.baidu.com/s/1JEkNQNG4gr3qckoY65lTDA?pwd=g13h)（Password: g13h）
 * **DRGBT-1K (Unaligned)**: [BaiduNetdisk](https://pan.baidu.com/s/1GUuPtvjFX1DpNhIbEi5HkQ?pwd=6xxh)（Password: 6xxh）
   > *Note: Due to the physical structure of heterogeneous devices and sensor mechanisms, real-world data naturally exhibits modality offsets between RGB and TIR under different viewpoints. We provide this unaligned version (where the spatial deviation is constrained within [0.01D, 0.17D] and the initial bias is randomly sampled within [2%, 17%]D, with D being the image diagonal length) to facilitate research on spatial perturbation and cross-modality alignment.*
+
+<p align="center">
+  <img src="fig_data/summary_avg_offset_distribution.png" width="600" alt="Average RGB-TIR offset distribution in DRGBT-1K (Unaligned)">
+</p>
 
 ---
 
